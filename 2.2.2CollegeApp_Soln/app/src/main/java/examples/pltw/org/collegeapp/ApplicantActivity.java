@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
+//step 8 implemented in line 16 below
 import android.view.MenuItem;
 
 import com.backendless.Backendless;
@@ -20,7 +21,7 @@ import com.backendless.Backendless;
 public class ApplicantActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private static final String TAG = ApplicantActivity.class.getName();
-
+//step 11 implemented in lines 24-26 below
     private static final String BE_APP_ID = "0F7E2B8A-746E-FEA6-FF24-49FF7FCBF600";
     private static final String BE_ANDROID_API_KEY = "A8310E63-73FF-9FDE-FF17-446598D0FC00";
     public  static final String EMAIL_PREF = "EMAIL_PREF";
@@ -61,7 +62,8 @@ public class ApplicantActivity extends AppCompatActivity
         }
         } );
          *****/
-
+         
+        //step 22 implemented in lines 66-69 below
         SharedPreferences sharedPreferences = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(EMAIL_PREF, MY_EMAIL_ADDRESS);
