@@ -1,7 +1,0 @@
-Files modified for 2.2.2 solution
-java/
-	ApplicantActivity.java
-	ApplicantData.java
-	Profile.java
-	ProfileFragment.java
-	AndroidManifest.xml
