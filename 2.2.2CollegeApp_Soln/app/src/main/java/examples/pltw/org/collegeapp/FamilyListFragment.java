@@ -10,7 +10,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-
 public class FamilyListFragment extends ListFragment { // Step 17 implemented in line 7
     private static final String TAG = FamilyListFragment.class.getName(); // Step 19 implemented in line 8
     private static Family mFamily; // Step 20 implemented in line 9
