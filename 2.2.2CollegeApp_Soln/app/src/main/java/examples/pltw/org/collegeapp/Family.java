@@ -6,26 +6,36 @@ import java.util.ArrayList;
  * Created by baaka on 1/24/2018.
  */
 
-public class Family {
-    private static final String TAG = Family.class.getName(); // Step 3 implemented in line 10
-    private ArrayList<FamilyMember> family;// Step 4 implemented in line 11
-    private static Family sFamily; // Step 6 implemented in line 12
+public class Family extends ArrayList<FamilyMember> {
+    private static final String TAG = "Family"; // step 3
+    ArrayList<FamilyMember> family = new ArrayList(); // step 4
+    private static Family sFamily; // step 6
 
-    private Family() {   // Step 7 implemented in lines 14-16
-        family = new ArrayList();
-        family.add(new Guardian("Calvin", "Brown")); // Step 10 implemented in lines 16-17
-        family.add(new Guardian());
+    private Family() { // step 7
+        Guardian g1 = new Guardian("first", "last");
+        Guardian g2 = new Guardian();
+        family.add(g1); // step 10
+        family.add(g2);
     }
 
-    public static Family get() { // Step 12 implemented in line 20
-        if (sFamily == null) { // Step 13 implemented in line 21
-            Family f = new Family(); // Step 15 implemented in lines 22-23;
-            sFamily = f;
+    public static Family get() { // step 12
+        try {
+            return sFamily; // step 14
+        } // step 13
+
+        catch (NullPointerException e) {
+            sFamily = new Family(); // step 15
+            return sFamily;
         }
-        return sFamily; // Step 14 implemented in line 25
+
+
     }
 
-    public ArrayList<FamilyMember> getFamily() { // Step 16 implemented in lines 28-35
+    public static void setsFamily(Family sFamily) {
+        Family.sFamily = sFamily;
+    }
+
+    public ArrayList<FamilyMember> getFamily() { // step 16
         return family;
     }
 
